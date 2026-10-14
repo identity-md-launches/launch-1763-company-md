@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "CompanyToken",
+    "name": "Company.md",
+    "symbol": "COMD",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xbb85c1b7540d9e7b56f7a595fc1ff7dd07cb0823"
+  },
+  "notes": "CompanyToken (src/CompanyToken.sol) is a fixed-supply ERC-20 built on unmodified OpenZeppelin Contracts v5.4.0. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 COMD (1000000000000000000000000000 minor units, 18 decimals) once to msg.sender, which is the factory when deployed through ProjectFactory.launchCustom. It has no owner, no administrative roles, no mint or burn entry points, no transfer fees or taxes, no pause, blacklist or freeze, no upgrade mechanism and no external callbacks, so every transfer moves exactly the stated amount and the supply can never grow after launch. The launch has no application contracts and no initialization calls. The factory forwards the swarm's share to the launch's MerkleDistributor, seeds the pool paired with IMD (0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7) at the 1.25% launch fee with 80% of the supply, deriving the opening price from the 2,500 IMD opening market cap, and sends the remainder to 0xbb85c1b7540d9e7b56f7a595fc1ff7dd07cb0823. pool.initialPrice is provenance only."
+}
